@@ -8,15 +8,15 @@ on:
       KERNEL_SOURCE:
         description: 'Kernel Source'
         required: true
-        default: 'https://github.com/ajugeorge98/test_kernel_asus_sdm636.git'
+        default: 'git clone --recursive https://github.com/Tiktodz/android_kernel_asus_sdm636'
       KERNEL_SOURCE_BRANCH:
         description: 'Branch'
         required: true
-        default: 'caf-hmp-oc'
+        default: 'test'
       KERNEL_DEFCONFIG:
         description: 'Defconfig'
         required: true
-        default: 'neternels_defconfig'
+        default: 'X00TD_defconfig'
       KERNEL_FILE:
         description: 'Your kernel out image name'
         required: true
