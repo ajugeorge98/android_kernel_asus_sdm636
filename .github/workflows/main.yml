@@ -8,7 +8,7 @@ on:
       KERNEL_SOURCE:
         description: 'Kernel Source'
         required: true
-        default: 'git clone --recursive https://github.com/Tiktodz/android_kernel_asus_sdm636'
+        default: 'git clone https://github.com/ajugeorge98/android_kernel_asus_sdm636.git'
       KERNEL_SOURCE_BRANCH:
         description: 'Branch'
         required: true
