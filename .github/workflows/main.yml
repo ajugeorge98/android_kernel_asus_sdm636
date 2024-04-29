@@ -8,7 +8,7 @@ on:
       KERNEL_SOURCE:
         description: 'Kernel Source'
         required: true
-        default: 'git clone https://github.com/ajugeorge98/android_kernel_asus_sdm636.git'
+        default: 'https://github.com/ajugeorge98/android_kernel_asus_sdm636.git'
       KERNEL_SOURCE_BRANCH:
         description: 'Branch'
         required: true
@@ -89,7 +89,7 @@ jobs:
     - name: Download kernel source
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} android-kernel --depth=1
+        git clone --recursive ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} android-kernel --depth=1
 
     - name: Setup KernelSU
       if: env.USE_KERNELSU == 'true'
